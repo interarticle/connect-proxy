@@ -9,7 +9,9 @@ This middleware allows you to use your connect-based app regardless of your node
    - Logging `:remote-addr`: When logging with connects logger middleware, the address logged is the proxies ip
    - Redirecting to `'/'`:
 
-It does so by replacing properties of the req object with values taken from special headers containing the originating IP address and the host name that was originally accessed. Most proxies send these kind of headers, usually its `'x-forwarded-for'` and `'x-forwarded-host'` ([apache](http://httpd.apache.org/docs/2.3/mod/mod_proxy.html#x-headers), nginx). These headers can be comma separated lists in case of multiple proxies, with the left-most being the originating value.
+It does so by replacing properties of the req object with values taken from special headers containing the originating IP address and the host name that was originally accessed. Most proxies send these kind of headers, usually its `'x-forwarded-for'` and `'x-forwarded-host'` . These headers can be comma separated lists in case of multiple proxies, with the left-most being the originating value.
+
+Docs: [apache](http://httpd.apache.org/docs/2.3/mod/mod_proxy.html#x-headers), [nginx](http://wiki.nginx.org/HttpProxyModule), [squid](http://www.squid-cache.org/Doc/config/forwarded_for/)
 
 ## Connect Compatibility
 If someone finds out, drop me a line.
