@@ -14,6 +14,13 @@ It does so by replacing properties of the req object with values taken from spec
 
 Docs: [apache](http://httpd.apache.org/docs/2.3/mod/mod_proxy.html#x-headers), [nginx](http://wiki.nginx.org/HttpProxyModule), [squid](http://www.squid-cache.org/Doc/config/forwarded_for/)
 
+## Usage
+
+    var proxy = require('connect-proxy');
+    app.configure(function() {
+      app.use(proxy.realValues({ trusted: '127.0.0.1' }));
+    }
+
 ## Connect Compatibility
 If someone finds out, drop me a line.
 
