@@ -40,7 +40,8 @@ Use the middleware by calling `realValues` with an options object:
    - `hostHeader`
 
 ## Connect Compatibility
-Works with Connect@1.3.0 :-)
+Works with Connect@1.3.0
+
 If someone finds out more, drop me a line.
 
 ## License
