@@ -24,15 +24,20 @@ Require the module:
 
     var proxy = require('connect-proxy');
 
-Use the middleware by calling `realValues` with an options:
+Use the middleware by calling `realValues` with an options object:
 
     app.configure(function() {
-      app.use(proxy.realValues({ trusted: '127.0.0.1' }));
+      app.use(proxy.realValues({
+        trusted: '127.0.0.1'
+      }));
     }
 
 ## Options
 
-   - `option` description
+   - `trusted` description
+   - `strict`
+   - `ipHeader`
+   - `hostHeader`
 
 ## Connect Compatibility
 If someone finds out, drop me a line.
