@@ -28,16 +28,17 @@ Use the middleware by calling `realValues` with an options object:
 
     app.configure(function() {
       app.use(proxy.realValues({
-        trusted: '127.0.0.1'
+        trusted: '141.10.214.0/24',
+        strict: false,
+        ipHeader: 'x-real-ip'
       }));
     }
 
 ## Options
 
-   - `trusted` request headers can be faked. the `trusted` option tells connect-proxy to only trust the given proxy ip or IP-range. this option will default to `127.0.0.1` if not set and supports [cidr](http://wikipedia.com) notation.
- *                  or wrong format
-   - `strict`
-   - `ipHeader`
+   - `trusted` {String} request headers can be faked. this option option tells connect-proxy to only trust the given proxy ip or ip-range. ip-ranges must be written in [CIDR](http://en.wikipedia.org/wiki/CIDR_notation) notation. defaults to _'127.0.0.1'_ if not set or wrong format.
+   - `strict` strict mode, defaults to _true_. when an untrusted ip-address is found, connect-proxy will throw an error. if this is set to false, no error will be thrown and proxy headers will be ignored.
+   - `ipHeader` header property in which originating ip address and additional proxy ip addresses are defined. defaults to _'x-forwarded-for'_
    - `hostHeader`
 
 ## Connect Compatibility
