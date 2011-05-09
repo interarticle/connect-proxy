@@ -6,7 +6,7 @@ When proxying to node (often done because of host/port restrictions, albeit the 
 
 This middleware allows you to use your connect-based app regardless of your node installation being proxied to. It also helps you utilize features of connect that depend on the described header values and would otherwise lead to unexpected results:
 
-   - Logging `:remote-addr`: When logging with connects logger middleware, the address logged is no longer the address of the proxy, but the address of the user
+   - Logging `:remote-addr`: The address logged by using the `:remote-addr`-Token of connects logger middleware is no longer the address of the proxy, but the address of the user
    - Redirecting to `'/'`:
 .
 
