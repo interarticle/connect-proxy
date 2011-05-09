@@ -4,11 +4,10 @@ Connect-Proxy is a middleware layer for [Connect](https://github.com/senchalabs/
 ## Purpose
 When proxying to node (often done because of host/port restrictions, albeit the shortcomings of this approach), the IP address at `req.socket.remoteAddress` is the IP of the proxy server and `req.headers.host` is the internal hostname:port of the node server, e.g. localhost:3000.
 
-This middleware allows you to use your connect-based app regardless of your node installation being proxied to. It also helps you utilize features of connect that depend on the described header values and would otherwise lead to unexpected results:
+This middleware allows you to use your connect-based app regardless of your node installation being proxied to. It also helps you utilize features of connect and [Express](https://github.com/visionmedia/express/) that depend on the described header values and would otherwise lead to unexpected results:
 
    - Logging `:remote-addr`: The address logged by using the `:remote-addr`-Token of connects logger middleware is no longer the address of the proxy, but the address of the user
-   - Redirecting to `'/'`:
-.
+   - Redirecting to `'/'`: When redirecting to relative URLs, express prepends protocol and host before redirecting. the prepended host is taken from req.headers.host which leads to redirects to _http://localhost:port/_ when proxying locally (e.g. proxying through apache)
 
 It does so by replacing properties of the req object with values taken from special headers containing the originating IP address and the host name that was originally accessed. Most proxies send these kind of headers, usually `x-forwarded-for` and `x-forwarded-host` . These headers can be comma separated lists in case of multiple proxies, with the left-most being the originating value.
 
