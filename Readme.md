@@ -36,9 +36,9 @@ Use the middleware by calling `realValues` with an options object:
 ## Options
 
    - `trusted` {String} request headers can be faked. this option option tells connect-proxy to only trust the given proxy ip or ip-range. ip-ranges must be written in [CIDR](http://en.wikipedia.org/wiki/CIDR_notation) notation. defaults to _'127.0.0.1'_ if not set or wrong format.
-   - `strict` strict mode, defaults to _true_. when an untrusted ip-address is found, connect-proxy will throw an error. if this is set to false, no error will be thrown and proxy headers will be ignored.
-   - `ipHeader` header property in which originating ip address and additional proxy ip addresses are defined. defaults to _'x-forwarded-for'_
-   - `hostHeader` header property in which originating host and additional proxy hosts are defined. defaults to _'x-forwarded-host'_
+   - `strict` {Boolean} strict mode, defaults to _true_. when an untrusted ip-address is found, connect-proxy will throw an error. if this is set to false, no error will be thrown and proxy headers will be ignored.
+   - `ipHeader` {String} header property in which originating ip address and additional proxy ip addresses are defined. defaults to _'x-forwarded-for'_
+   - `hostHeader` {String} header property in which originating host and additional proxy hosts are defined. defaults to _'x-forwarded-host'_
 
 ## Connect Compatibility
 Works with Connect@1.3.0 - if someone finds out more, drop me a line.
