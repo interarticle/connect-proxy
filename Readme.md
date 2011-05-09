@@ -14,6 +14,10 @@ It does so by replacing properties of the req object with values taken from spec
 
 Docs: [apache](http://httpd.apache.org/docs/2.3/mod/mod_proxy.html#x-headers), [nginx](http://wiki.nginx.org/HttpProxyModule), [squid](http://www.squid-cache.org/Doc/config/forwarded_for/)
 
+## Install
+
+`npm install connect-proxy`
+
 ## Usage
 
     var proxy = require('connect-proxy');
