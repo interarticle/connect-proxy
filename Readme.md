@@ -40,7 +40,8 @@ Use the middleware by calling `realValues` with an options object:
    - `hostHeader`
 
 ## Connect Compatibility
-If someone finds out, drop me a line.
+Works with Connect@1.3.0 :-)
+If someone finds out more, drop me a line.
 
 ## License
 View the [LICENSE](https://github.com/gonsfx/connect-proxy/blob/master/LICENSE) file.
