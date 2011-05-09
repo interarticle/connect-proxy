@@ -34,7 +34,8 @@ Use the middleware by calling `realValues` with an options object:
 
 ## Options
 
-   - `trusted` description
+   - `trusted` request headers can be faked. the `trusted` option tells connect-proxy to only trust the given proxy ip or IP-range. this option will default to `127.0.0.1` if not set and supports [cidr](http://wikipedia.com) notation.
+ *                  or wrong format
    - `strict`
    - `ipHeader`
    - `hostHeader`
