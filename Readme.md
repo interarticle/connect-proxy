@@ -20,7 +20,10 @@ Docs: [apache](http://httpd.apache.org/docs/2.3/mod/mod_proxy.html#x-headers), [
 
 ## Usage
 
+Require the module:
     var proxy = require('connect-proxy');
+
+Use the middleware by calling `realValues` with an options-object:
     app.configure(function() {
       app.use(proxy.realValues({ trusted: '127.0.0.1' }));
     }
