@@ -1,0 +1,19 @@
+{
+  "name": "connect-proxy",
+  "version": "1.0.0",
+  "description": "get originating ip and host values when proxying to your connect app",
+  "keywords": ["connect", "middleware", "proxy", "apache", "nginx", "squid", "headers"],
+  "author": {
+    "name": "Christoph Werner",
+    "email": "gonsfx@googlemail.com",
+    "url": "http://twitter.com/gonsfx"
+  },
+  "main": "index",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/gonsfx/connect-proxy.git"
+  },
+  "dependencies": {
+    "connect": "<= 1.0.0"
+  }
+}
