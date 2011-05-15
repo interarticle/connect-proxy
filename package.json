@@ -1,6 +1,6 @@
 {
   "name": "connect-proxy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Retrieve originating ip/host values when proxying to your connect app",
   "keywords": ["connect", "middleware", "proxy", "apache", "nginx", "squid", "headers"],
   "author": {
