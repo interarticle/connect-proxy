@@ -12,8 +12,5 @@
   "repository": {
     "type": "git",
     "url": "http://github.com/gonsfx/connect-proxy.git"
-  },
-  "dependencies": {
-    "connect": "<= 1.0.0"
   }
 }
